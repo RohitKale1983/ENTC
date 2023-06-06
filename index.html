@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header class="bg-white py-4">
+    <div class="container mx-auto flex items-center justify-center px-4">
+        <img src="logo.png" alt="College Logo" class="h-20 mr-2">
+        <div class="text-center">
+            <h4 class="text-lg font-bold" style="font-family: cambria;">KJ's Educational Institute</h4>
+            <h2 class="text-2xl">
+              <a href="https://www.kjei.edu.in/tcoer/tcoerindex.php" style="font-family: Cambria;">Trinity College of Engineering and Research, Pune</a>
+           </h2>
+            <h5 class="text-sm" style="font-family: cambria;">(Approved by AICTE, DTE &amp; Affiliated to SPPU, University Id No- PU/PN/Engg./341/2008, DTE Admission Code-EN6184)</h5>
+        </div>
+    </div>
+</header>
+    <header class="bg-blue-500 py-4">
+        <div class="container mx-auto flex items-center justify-between px-4">
+          <a href="#" class="text-white text-xl font-bold">ENTC Department</a>
+    
+          <nav class="space-x-4">
+            <a href="index.html" class="text-white hover:text-gray-200">Home</a>
+            <a href="login.html" class="text-white hover:text-gray-200">Login</a>
+            <a href="#" class="text-white hover:text-gray-200">Gallery</a>
+            <a href="result.html" class="text-white hover:text-gray-200">Result</a>
+          </nav>
+        </div>
+      </header>
+    
+      <main class="container mx-auto py-8">
+        <h1 class="text-4xl font-bold mb-4">Welcome to the ENTC Department</h1>
+        <div class="bg-gray-200 py-4">
+          <div class="container mx-auto">
+            <div class="announcement">
+                <p class="scrolling-text text-gray-800" onmouseover="pauseAnnouncement(this)" onmouseout="resumeAnnouncement(this)">
+                  This is the first announcement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-container">
+          <img class="slider-image" src="image1.jpg" alt="Landscape 1">
+          <div class="slider-text">NEON</div>
+          
+          <img class="slider-image" src="image2.jpeg" alt="Landscape 2">
+          <div class="slider-text">NEON</div>
+          
+          <img class="slider-image" src="image3.jpeg" alt="Landscape 3">
+          <div class="slider-text">NEON</div>
+          <div class="slider-arrows">
+            <div class="slider-arrow" onclick="previousSlide()">&lt;</div>
+            <div class="slider-arrow" onclick="nextSlide()">&gt;</div>
+        </div>
+        </div>
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold mb-4">Quick Links</h2>
+          <hr class="border-gray-300 my-4">
+         <div class="container mx-auto">
+          <div class="grid grid-cols-3 gap-x--50 gap-y-2">
+            <a href="#" class="quick-link">
+              <span>Placements</span>
+            </a>
+            <a href="timetable.html" class="quick-link">
+              <span>Timetable</span>
+            </a>
+            <a href="https://dexpertsystems.com/welcome?mid=230" class="quick-link">
+              <span>Fees Payment</span>
+            </a>
+            <a href="result.html" class="quick-link">
+              <span>Result</span>
+            </a>
+            <div class="quick-link">
+              <button onclick="scrollToContent()" style="font-weight: bold;">Contact</button></div>
+            <a href="login.html" class="quick-link">
+              <span>login</span>
+            </a>
+            <a href="#" class="quick-link">
+              <span>Gallery</span>
+            </a>
+            <a href="#" class="quick-link">
+              <span>Button 8</span>
+            </a>
+            <a href="#" class="quick-link">
+              <span>Button 9</span>
+            </a>
+          </div>
+        </div>
+        <hr class="border-gray-300 my-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded shadow">
+            <h2 class="text-2xl font-bold mb-2">About Us</h2>
+            <p class="text-gray-700">Learn more about the ENTC Department, our mission, and our history.</p>
+            <a href="https://www.kjei.edu.in/tcoer/entc_about_dept.php" class="text-blue-500 hover:text-blue-700 mt-4 inline-block">Read More</a>
+          </div>
+    
+          
+    
+          <div class="bg-white p-6 rounded shadow">
+            <h2 class="text-2xl font-bold mb-2">Faculty</h2>
+            <p class="text-gray-700">Meet our experienced faculty members who are dedicated to providing quality education and mentorship.</p>
+            <a href="https://www.kjei.edu.in/tcoer/entc_faculty.php" class="text-blue-500 hover:text-blue-700 mt-4 inline-block">Meet the Faculty</a>
+          </div>
+        </div>
+      </main>
+      <div class="bg-gray-200 py-8 rounded-lg" style="margin-left: 20px; margin-right: 20px;">
+        <div class="container mx-auto px-4">
+          <h2 class="text-2xl font-bold mb-4">Vision and Mission</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow">
+              <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
+              <p class="text-gray-700">Attain academic excellence in Electronics and Telecommunication Engineering through effective outcome based learning environment to develop efficient and dynamic systems.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+              <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+              <p class="text-gray-700">Develop human resource to intuitively grasp the advancements in the subject of Electronics and Telecommunication to be disseminated back with value addition through our sincere, humble and environment friendly efforts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div id="content">
+      <div class="bg-gray-200 py-8 rounded-lg mt-8" style="margin-left: 20px; margin-right: 20px;">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow">
+              <h3 class="text-xl font-semibold mb-2">
+              <i class="fas fa-map-marker-alt"></i>
+                Address
+              </h3>
+              <p class="text-gray-700">123 Main Street, City, Country</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+              <h3 class="text-xl font-semibold mb-2">
+                <i class="fas fa-phone"></i>
+                Phone Number
+              </h3>
+              <p class="text-gray-700">+1 123-456-7890</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+              <h3 class="text-xl font-semibold mb-2">
+                <i class="fas fa-envelope"></i>
+                Email
+              </h3>
+              <p class="text-gray-700">example@example.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>      
+  <script src="script.js"></script>          
+</body>
+</html>
