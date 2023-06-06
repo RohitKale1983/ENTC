@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+  
+  <header class="bg-blue-500 py-4">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <a href="#" class="text-white text-xl font-bold">ENTC Department</a>
+
+      <nav class="space-x-4">
+        <a href="index.html" class="text-white hover:text-gray-200">Home</a>
+        <a href="login.html" class="text-white hover:text-gray-200">Login</a>
+        <a href="#" class="text-white hover:text-gray-200">Gallery</a>
+        <a href="result.html" class="text-white hover:text-gray-200">Result</a>
+      </nav>
+    </div>
+  </header>
+  
+   <div class="mt-8">
+   <div class="flex justify-center">
+    <h2 class="text-2xl font-bold mb-4">Student and Teacher Login</h2>
+   </div>
+     <div class="flex justify-center">
+      <button id="studentButton" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 mr-4">Student</button>
+      <button id="teacherButton" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Teacher</button>
+    </div>
+    
+    <div id="studentLogin" class="flex justify-center mt-8 hidden">
+      <div class="w-1/2 p-4 bg-white rounded shadow">
+        <h3 class="text-lg font-semibold mb-2">Student Login</h3>
+        <form>
+          <label class="block mb-2" for="student-prn">PRN Number:</label>
+          <input class="w-full border border-gray-300 rounded px-3 py-2 mb-4" type="text" id="student-prn" placeholder="Enter your PRN number" required>
+
+          <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600" type="submit">Log In</button>
+        </form>
+      </div>
+    </div>
+    
+    <div id="teacherLogin" class="flex justify-center mt-8 hidden">
+      <div class="w-1/2 p-4 bg-white rounded shadow">
+        <h3 class="text-lg font-semibold mb-2">Teacher Login</h3>
+        <form>
+          <label class="block mb-2" for="teacher-email">Email:</label>
+          <input class="w-full border border-gray-300 rounded px-3 py-2 mb-4" type="email" id="teacher-email" placeholder="Enter your email" required>
+
+          <label class="block mb-2" for="teacher-password">Password:</label>
+          <input class="w-full border border-gray-300 rounded px-3 py-2 mb-4" type="password" id="teacher-password" placeholder="Enter your password" required>
+
+          <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600" type="submit">Log In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    const studentButton = document.getElementById('studentButton');
+    const teacherButton = document.getElementById('teacherButton');
+    const studentLogin = document.getElementById('studentLogin');
+    const teacherLogin = document.getElementById('teacherLogin');
+
+    studentButton.addEventListener('click', () => {
+      studentLogin.classList.remove('hidden');
+      teacherLogin.classList.add('hidden');
+    });
+
+    teacherButton.addEventListener('click', () => {
+      teacherLogin.classList.remove('hidden');
+      studentLogin.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>

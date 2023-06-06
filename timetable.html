@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timetable</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Add custom styles here */
+  </style>
+</head>
+<body class="bg-gray-100">
+  <header class="bg-blue-500 py-4">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <a href="#" class="text-white text-xl font-bold">ENTC Department</a>
+
+      <nav class="space-x-4">
+        <a href="index.html" class="text-white hover:text-gray-200">Home</a>
+        <a href="login.html" class="text-white hover:text-gray-200">Login</a>
+        <a href="#" class="text-white hover:text-gray-200">Gallery</a>
+        <a href="result.html" class="text-white hover:text-gray-200">Result</a>
+      </nav>
+    </div>
+  </header>
+  <div class="container mx-auto py-8">
+    <h1 class="text-4xl font-bold mb-4">Timetable</h1>
+    
+    <div class="flex justify-center mb-8">
+      <select id="year-select" class="px-4 py-2 border border-gray-300 rounded">
+        <option value="second-year">Second Year</option>
+        <option value="third-year">Third Year</option>
+        <option value="fourth-year">Fourth Year</option>
+      </select>
+    </div>
+    
+    <div id="timetable-second-year" >
+      <h2 class="text-2xl font-bold mb-4">Second Year Timetable</h2>
+      <table class="w-full bg-white border border-gray-300">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 bg-gray-200 border-b border-gray-300">Time</th>
+            <th class="py-2 px-4 bg-gray-200 border-b border-gray-300">Monday</th>
+            <th class="py-2 px-4 bg-gray-200 border-b border-gray-300">Tuesday</th>
+            <th class="py-2 px-4 bg-gray-200 border-b border-gray-300">Wednesday</th>
+            <th class="py-2 px-4 bg-gray-200 border-b border-gray-300">Thursday</th>
+            <th class="py-2 px-4 bg-gray-200 border-b border-gray-300">Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="py-2 px-4 border-b border-gray-300">9:15-10:10 AM</td>
+            <td class="py-2 px-4 border-b border-gray-300">POC(B1)<br> OOPS(B2)<br> PBL(B3)</td>
+            <td class="py-2 px-4 border-b border-gray-300">OOPS</td>
+            <td class="py-2 px-4 border-b border-gray-300">SS</td>
+            <td class="py-2 px-4 border-b border-gray-300">CS</td>
+            <td class="py-2 px-4 border-b border-gray-300">POC</td>
+          </tr>
+        </tbody>
+        <!-- Timetable for the second year -->
+      </table>
+    </div>
+
+    <div id="timetable-third-year" class="hidden">
+      <h2 class="text-2xl font-bold mb-4">Third Year Timetable</h2>
+      <table class="w-full bg-white border border-gray-300">
+        <!-- Timetable for the third year -->
+      </table>
+    </div>
+
+    <div id="timetable-fourth-year" class="hidden">
+      <h2 class="text-2xl font-bold mb-4">Fourth Year Timetable</h2>
+      <table class="w-full bg-white border border-gray-300">
+        <!-- Timetable for the fourth year -->
+      </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

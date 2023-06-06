@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Marks</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <header class="bg-blue-500 py-4">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <a href="#" class="text-white text-xl font-bold">ENTC Department</a>
+
+      <nav class="space-x-4">
+        <a href="index.html" class="text-white hover:text-gray-200">Home</a>
+        <a href="login.html" class="text-white hover:text-gray-200">Login</a>
+        <a href="#" class="text-white hover:text-gray-200">Gallery</a>
+        <a href="result.html" class="text-white hover:text-gray-200">Result</a>
+      </nav>
+    </div>
+  </header>
+  <div class="container mx-auto py-8">
+    <h1 class="text-4xl font-bold mb-4" style="text-align: center;">Student Marks</h1>
+    <form id="marks-form" onsubmit="return validateForm()" class="max-w-md mx-auto bg-white rounded-lg shadow-md px-6 py-8">
+      <div class="mb-4">
+        <label class="block mb-2" for="rollno">Roll Number:</label>
+        <input type="text" id="rollno" name="rollno" placeholder="Enter your Roll Number" class="w-full border border-gray-300 rounded px-3 py-2" required>
+      </div>
+      <div class="mb-4">
+        <label class="block mb-2" for="mothername">Mother's Name:</label>
+        <input type="text" id="mothername" name="mothername" placeholder="Enter your Mother's Name" class="w-full border border-gray-300 rounded px-3 py-2" required>
+      </div>
+      <div class="mb-4">
+        <label class="block mb-2">Year:</label>
+        <div class="space-x-4">
+          <input type="radio" id="second-year" name="year" value="second-year" onclick="showSemesterOptions()" class="mr-2">
+          <label for="second-year">Second Year</label>
+          <input type="radio" id="third-year" name="year" value="third-year" onclick="showSemesterOptions()" class="mr-2">
+          <label for="third-year">Third Year</label>
+          <input type="radio" id="fourth-year" name="year" value="fourth-year" onclick="showSemesterOptions()" class="mr-2">
+          <label for="fourth-year">Fourth Year</label>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block mb-2" for="semester">Semester:</label>
+        <select id="semester" name="semester" class="w-full border border-gray-300 rounded px-3 py-2">
+          <option id="third-sem" value="third-sem" class="hidden">Third Semester</option>
+          <option id="fourth-sem" value="fourth-sem" class="hidden">Fourth Semester</option>
+          <option id="fifth-sem" value="fifth-sem" class="hidden">Fifth Semester</option>
+          <option id="sixth-sem" value="sixth-sem" class="hidden">Sixth Semester</option>
+          <option id="seventh-sem" value="seventh-sem" class="hidden">Seventh Semester</option>
+          <option id="eighth-sem" value="eighth-sem" class="hidden">Eighth Semester</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label class="block mb-2" for="testtype">Test Type:</label>
+        <div class="relative">
+          <select id="testtype" name="testtype" class="w-full border border-gray-300 rounded px-3 py-2">
+            <option value="unit1">Unit Test 1</option>
+            <option value="unit2">Unit Test 2</option>
+            <option value="insem">Insem</option>
+          </select>
+    
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Submit</button>
+      </div>      
+    </form>
+    <div id="marks-display" class="mt-8"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
